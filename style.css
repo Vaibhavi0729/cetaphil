@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#dff1f8, #ffffff);
+  color: #1d3557;
+  line-height: 1.7;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+nav h2 {
+  color: #0077b6;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #1d3557;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 10%;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero img {
+  max-width: 100%;
+}
+
+/* TEXT */
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 650px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: #0077b6;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+footer {
+  background: #0a2540;
+  color: white;
+  padding: 50px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+footer a {
+  color: #cfe9f3;
+  text-decoration: none;
+  display: block;
+  margin-top: 8px;
+}
+/* CONTACT HERO */
+.contact-hero {
+  height: 60vh;
+  background: url("../images/contact-hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-hero .overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* CONTACT CONTAINER */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 5rem;
+  background: #f4fbff;
+}
+
+.contact-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 140px;
+}
+
+.contact-form button {
+  background: #0077B6;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== HERO IMAGE FIX (IMPORTANT) ===== */
+
+.hero-image img,
+.benefits-hero img {
+  max-width: 380px;   /* controls image size */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===== BENEFITS HERO LAYOUT ===== */
+
+.benefits-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem;
+  background: linear-gradient(to right, #eaf7fb, #ffffff);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 900px) {
+  .benefits-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 260px;
+  }
+}
